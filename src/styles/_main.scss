@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Poppins&display=swap");
+
+:root {
+  --primary-color: rgb(255, 255, 255);
+
+  --success-color: #2a8b26;
+  --warning-color: #f0ad2c;
+  --danger-color: #d61616;
+  --secondary-color: #9fab9f;
+  --light-color: #ffffff;
+  --dark-color: #272727;
+
+  --border-color:rgb(100, 133, 155);
+
+  --menu-header-active-color: #fff;
+  --menu-header-active-bg: rgb(255, 97, 145);
+
+  --font-color-theme-light:#333;
+  --font-color-theme-dark:#fff;
+
+  --font-family-primary: "Poppins";
+}
+
+html {
+  font-size: 14px;
+  font-family: var(--font-family-primary);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll bars custom */
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+  border-radius: 50px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(252, 236, 255);
+  //   border-radius: 50px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background-clip: content-box;
+}
+
+.mb-2{
+  margin-bottom: 200px;
+}

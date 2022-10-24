@@ -1,0 +1,70 @@
+@import "../../styles/variable";
+
+.header__menu {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  height: fit-content;
+  transition: ease-in-out 0.5s;
+  padding: 2vh 0vh;
+  margin: 0;
+  &--active {
+    background-color: var(--menu-header-active-bg);
+    padding: 1vh 0vh;
+    color: var(--menu-header-active-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  .menu__logo {
+    flex: 5;
+    position: relative;
+    top: 0.5vh;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../asset/logo-nosloganblack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: ease-in-out 0.5s;
+    margin-left: 10vh;
+
+    @include mobile {
+      margin-left: 0vh;
+      transition: ease-in-out 0.5s;
+    }
+
+    &--active {
+      background-image: url("../../asset/logo-noslogan.png");
+      transition: ease-in-out 0.5s;
+    }
+  }
+  .menu__option__wrapper {
+    flex: 5;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vh;
+    margin-right: 10vh;
+    @include mobile {
+      margin-right: 0vh;
+      transition: ease-in-out 0.5s;
+    }
+  }
+  .menu__option {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color-theme-light);
+    &--active {
+      color: var(--font-color-theme-dark);
+    }
+    .option {
+      padding: 0 1vh;
+    }
+  }
+}

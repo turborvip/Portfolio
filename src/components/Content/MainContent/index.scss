@@ -1,0 +1,19 @@
+@import "../../..//styles/variable";
+
+.main__content__wrapper {
+  position: relative;
+  background: linear-gradient(rgb(255,237,223), rgb(255,237,223));
+  width: 100%;
+  @include mobile {
+    .content__left,.content__right{
+      display: none;
+      transition: ease-in-out 1s;
+    }
+  }
+  @include desktop {
+    .content__left,.content__right{
+      display: block;
+      transition: ease-in-out 1s;
+    }
+  }
+}
