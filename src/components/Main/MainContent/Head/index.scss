@@ -1,0 +1,63 @@
+@import "../../../..//styles/variable";
+
+.head {
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &__custom {
+      width: 80%;
+      height: 500px;
+      border: 5px solid var(--border-color);
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title__welcome {
+      color: var(--primary-font-color--active);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      @include mobile {
+        text-align: center;
+      }
+    }
+    .typing {
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      font-size: 2rem;
+      line-height: 60px;
+      font-family: Calibri;
+      @include mobile {
+        text-align: center;
+      font-size: 1.5rem;
+      }
+    }
+    .description {
+      letter-spacing: 0.05rem;
+      font-size: 1.1rem;
+      font-weight: lighter;
+      line-height: 2rem;
+      @include mobile {
+        text-align: center;
+        line-height: 2rem;
+        font-size: 1rem;
+      }
+    }
+    .contacts {
+      position: relative;
+      display: flex;
+      gap: 3%;
+      margin-top: 5%;
+      @include mobile {
+        justify-content: center;
+      }
+      .contact {
+        font-size: xx-large;
+        color: var(--primary-font-color--active);
+      }
+    }
+  }
+}

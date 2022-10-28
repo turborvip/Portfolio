@@ -1,0 +1,25 @@
+.service{
+    .title{
+        display: flex;
+        justify-content: center;
+        p{
+          font-size: xx-large;
+          font-weight: bolder;
+          border-bottom: 2px solid var(--primary-font-color--active);
+          margin: 20px;
+        }
+    }
+    .cards{
+      display: flex;
+      align-content: stretch;
+      .card__service{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card__footer{
+          margin-top: auto;
+        }
+      }
+
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 
-import MainContent from './MainContent'
+import MainContent from './MainContent/MainContent'
 import TopContent from './TopContent/TopContent'
 
 

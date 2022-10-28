@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: rgb(255, 255, 255);
+  --primary-font-color--active:rgb(255, 97, 145);
 
   --success-color: #2a8b26;
   --warning-color: #f0ad2c;
@@ -24,6 +25,8 @@
 html {
   font-size: 14px;
   font-family: var(--font-family-primary);
+  overflow-x: hidden;
+
 }
 
 body {
@@ -54,3 +57,8 @@ body {
 .mb-2{
   margin-bottom: 200px;
 }
+
+.mb-1{
+  margin-bottom: 100px;
+}
+

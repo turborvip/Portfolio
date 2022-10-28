@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { getGlobalState } from "../../utils/getGlobal";
 import "./index.scss";
-import { useDisclosure } from "@mantine/hooks";
-import { Drawer, Button, Group, Burger } from "@mantine/core";
+import { getGlobalState } from "../../utils/getGlobal";
+import { useStore, actions } from "../../store";
 
-interface propsHeader {
-  logo: string;
-  menus: string[];
-}
-const props: propsHeader = {
-  logo: "Turborvip",
-  menus: ["Home", "About", "Service", "Portfolio", "Blog", "Contact"],
-};
+import { useDisclosure } from "@mantine/hooks";
+import { Drawer, Burger, Menu } from "@mantine/core";
+
 function Header() {
+  const [state, dispatch] = useStore();
+  const menus = state?.menus;
+
   const [isScroll, setScroll] = useState<boolean>(false);
   const [isCollapse, setCollapse] = useState<boolean>(false);
   const [isHamburger, { toggle }] = useDisclosure(false);
@@ -49,7 +46,7 @@ function Header() {
     } else {
       return (
         <>
-          {props.menus.map((menu, idx) => (
+          {menus.map((menu: string, idx: number) => (
             <li className='option' key={idx}>
               {menu}
             </li>
@@ -79,13 +76,17 @@ function Header() {
         transition='slide-left'
         transitionDuration={250}
         transitionTimingFunction='ease'
-        title='Turborvip'
+        title='TURBORVIP'
         padding='xl'
         size='xl'
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ea sit
-        earum ratione quisquam aliquam at nihil illum doloribus porro, facere
-        cupiditate dolore cum aliquid eum voluptas ipsam, velit quo.
+        <Menu shadow="md" width={200}>
+          {menus.map((menu: string, idx: number) => (
+            <Menu.Item key={idx}>
+              {menu}
+            </Menu.Item>
+          ))}
+        </Menu>
       </Drawer>
     </div>
   );

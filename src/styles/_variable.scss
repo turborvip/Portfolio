@@ -15,3 +15,9 @@ $breakpoint-xl: 1200px;
     @content;
   }
 }
+
+@mixin monitor-xl {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}

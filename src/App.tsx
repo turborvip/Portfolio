@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "./components/Content/Content";
+import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <Content />
+      <Main />
       <Footer />
     </div>
   );

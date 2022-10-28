@@ -50,7 +50,7 @@ function Footer(props: any) {
           </a>
         </li>
       </ul>
-      <p>&copy;2022 Turborvip | Copyright Vipen Loka </p>
+      <p>&copy;2022 Turborvip</p>
     </footer>
   );
 }
